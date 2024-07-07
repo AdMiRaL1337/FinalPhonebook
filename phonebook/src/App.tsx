@@ -3,6 +3,7 @@ import Header from './components/Header';
 import ContactForm from './components/ContactForm';
 import { contactsReducer, AppState } from './reducers/contactsReducer';
 import ContactList from './components/ContactList';
+import csvExport from './components/CSV';
 
 import {Contact} from './types';
 import EditModal from './components/EditModal';
@@ -51,6 +52,7 @@ const App: FC = () => {
        toggleModal={toggleModal}
        dispatch={dispatch}
        />
+       <csvExport />
     </>
   );
 };

@@ -1,6 +1,11 @@
+import React, { FC, ChangeEvent, useState} from 'react';
 import { exportToCsv, importFromCsv } from '../utils/csvUtils';
+import { Contact } from '../types';
 
-const handleExportToCsv = () => {
+
+default export const csvExport: any function (): void {
+  const handleExportToCsv = () => {
+    const contacts: Contact[] = [];
     const csvData = exportToCsv(contacts);
     const blob = new Blob([csvData], { type: 'text/csv' });
     const url = window.URL.createObjectURL(blob);
@@ -24,7 +29,11 @@ const handleExportToCsv = () => {
     }
   };
 
-  <button onClick={handleExportToCsv}>Экспортировать в CSV</button>
-  <input type="file" accept=".csv" onChange={handleImportFromCsv} />
+  <><button onClick={handleExportToCsv}>Экспортировать в CSV</button><input type="file" accept=".csv" onChange={handleImportFromCsv} /></>;
 
-  default export CSV;
+
+
+  function setContacts(_importedContacts: import("../types").Contact[]) {
+    throw new Error('Function not implemented.');
+  }
+};
